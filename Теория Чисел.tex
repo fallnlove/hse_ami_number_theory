@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+\usepackage{header}
+
+\title{Решение семинаров по курсу Теории Чисел пилотного потока ПМИ}
+\author{Цыганов Аскар}
+\date{Январь - Март 2023}
+
+\begin{document}
+	\maketitle
+	
+	\tableofcontents
+	\newpage
+	\section{Семинары}{
+		\foreach \i in {1,...,11} {
+			\edef\FileName{sem/sem\i}%
+			\IfFileExists{\FileName}{%
+				\input{\FileName}%
+				\newpage%
+			}
+		}
+	}
+	
+\end{document}
